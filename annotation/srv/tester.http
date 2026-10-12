@@ -1,0 +1,24 @@
+GET http://localhost:4004/odata/v4/Order-Management/Product_set
+Authorization: Basic Priyam :
+###
+POST http://localhost:4004/odata/v4/Order-Management/Product_set
+Authorization: Basic Siddhanth :
+Content-Type: application/json
+
+{
+    "name" : "James",
+    "price" : 1500,
+    "currency" : "INR"
+}
+###
+DELETE http://localhost:4004/odata/v4/Order-Management/Product_set/d3f6cea9-2840-44fd-9a16-9f5cc7dbe6d4
+Authorization: Basic Siddhanth :
+
+###
+PATCH http://localhost:4004/odata/v4/Order-Management/Product_set/988f8be0-6a79-431b-8fef-364a0fec24fa
+Authorization: Basic Siddhanth :
+Content-Type: application/json
+
+{
+    "name" : "Jack"
+}

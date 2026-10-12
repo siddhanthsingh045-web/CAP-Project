@@ -1,0 +1,54 @@
+###
+GET http://localhost:4004/odata/v4/hospitalserv/Patientset
+Authorization: Basic Siddhanth:password 
+
+###
+POST http://localhost:4004/odata/v4/hospitalserv/Patientset
+Authorization: Basic Siddhanth:password
+Content-Type: application/json
+
+{
+    "name" : "Rey Mysterio",
+    "age" : 42,
+    "email" : "randyortan@gmail.com"
+}
+
+### here we are creating for Doctors 
+GET  http://localhost:4004/odata/v4/hospitalserv/Doctorset
+Authorization: Basic Siddhanth:password
+
+### 
+POST http://localhost:4004/odata/v4/hospitalserv/Doctorset
+Authorization : Basic Siddhanth:password
+Content-Type : application/json
+
+{
+    "name" : "Dr. Gurwinder",
+    "specialization" : "Ent"
+    } 
+### here we are creating for appointment 
+GET http://localhost:4004/odata/v4/hospitalserv/Appointmentset
+Authorization: Basic Siddhanth:password
+
+### 
+POST http://localhost:4004/odata/v4/hospitalserv/Appointmentset
+Authorization: Basic Siddhanth:password
+Content-Type: application/json
+
+ {
+    "patient_ID" : "75d69747-9b76-45a8-bd77-1ab944d3043c",
+    "doctor_ID" : "285cbf62-3c33-4094-987c-5ff3d34ae9eb",
+    "details" : [
+        {
+            "description" : "First checkup",
+            "date" : "2026-09-21",
+            "notes" : "Patient coming with high blood pressure"
+        },
+        {
+            "description" : "second checkup",
+            "date" : "2026-09-21",
+            "notes" : "Patient coming with normal blood pressure"
+        }
+    ]
+ }   
+ 

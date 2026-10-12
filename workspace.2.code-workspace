@@ -1,0 +1,10 @@
+{
+    "folders": [
+        {
+            "path": "annotation"
+        }
+    ],
+    "settings": {
+        "SAP HANA Database Explorer.ShowXsAdvancedConnections": true
+    }
+}

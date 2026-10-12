@@ -1,0 +1,10 @@
+{
+    "folders": [
+        {
+            "path": "hospital"
+        }
+    ],
+    "settings": {
+        "SAP HANA Database Explorer.ShowXsAdvancedConnections": true
+    }
+}

@@ -1,0 +1,213 @@
+<mvc:View
+    controllerName="project1.controller.dashboard"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true">
+
+    <Page
+        id="dashboardPage"
+        title="hospitalrecord">
+
+        <content>
+
+            <VBox
+                id="mainVBox"
+                class="sapUiSmallMargin">
+
+                <Title
+                    id="welcomeTitle"
+                    text="Welcome to my CAPM Project-By Siddhanth"
+                    level="H2"
+                    class="sapUiMediumMarginBottom" />
+
+                <!-- Registered Patients -->
+
+                <Title
+                    id="patientsTitle"
+                    text="Registered Patients"
+                    level="H2"
+                    class="sapUiMediumMarginTop" />
+
+                <Table
+                    id="patientsTable"
+                    items="{/Patientset}"
+                    width="100%"
+                    noDataText="No data">
+
+                    <columns>
+
+                        <Column id="patientNameColumn">
+                            <Text
+                                id="patientNameHeader"
+                                text="Name" />
+                        </Column>
+
+                        <Column id="patientAgeColumn">
+                            <Text
+                                id="patientAgeHeader"
+                                text="Age" />
+                        </Column>
+
+                        <Column id="patientEmailColumn">
+                            <Text
+                                id="patientEmailHeader"
+                                text="Email" />
+                        </Column>
+
+                    </columns>
+
+                    <items>
+
+                        <ColumnListItem id="patientListItem">
+
+                            <cells>
+
+                                <Text
+                                    id="txtPatName"
+                                    text="{name}" />
+
+                                <Text
+                                    id="txtPatAge"
+                                    text="{age}" />
+
+                                <Text
+                                    id="txtPatEmail"
+                                    text="{email}" />
+
+                            </cells>
+
+                        </ColumnListItem>
+
+                    </items>
+
+                </Table>
+
+
+                <!-- Medical Staff / Doctors -->
+
+                <Title
+                    id="doctorsTitle"
+                    text="Medical Staff / Doctors"
+                    level="H2"
+                    class="sapUiMediumMarginTop" />
+
+                <Table
+                    id="doctorsTable"
+                    items="{/Doctorset}"
+                    width="100%"
+                    noDataText="No data">
+
+                    <columns>
+
+                        <Column id="doctorNameColumn">
+                            <Text
+                                id="doctorNameHeader"
+                                text="Doctor Name" />
+                        </Column>
+
+                        <Column id="doctorSpecializationColumn">
+                            <Text
+                                id="doctorSpecializationHeader"
+                                text="Specialization" />
+                        </Column>
+
+                    </columns>
+
+                    <items>
+
+                        <ColumnListItem id="doctorListItem">
+
+                            <cells>
+
+                                <Text
+                                    id="txtDocName"
+                                    text="{name}" />
+
+                                <Text
+                                    id="txtDocSpec"
+                                    text="{specialization}" />
+
+                            </cells>
+
+                        </ColumnListItem>
+
+                    </items>
+
+                </Table>
+
+
+                <!-- Appointment Logs & Notes -->
+
+                <Title
+                    id="appointmentsTitle"
+                    text="Appointment Logs &amp; Notes"
+                    level="H2"
+                    class="sapUiMediumMarginTop" />
+
+                <Table
+                    id="appointmentsTable"
+                    items="{/Appointmentdetailsset}"
+                    width="100%"
+                    noDataText="No data">
+
+                    <columns>
+
+                        <Column id="appointmentDescriptionColumn">
+                            <Text
+                                id="appointmentDescriptionHeader"
+                                text="Description" />
+                        </Column>
+
+                        <Column id="appointmentDateColumn">
+                            <Text
+                                id="appointmentDateHeader"
+                                text="Date" />
+                        </Column>
+
+                        <Column id="appointmentNotesColumn">
+                            <Text
+                                id="appointmentNotesHeader"
+                                text="Notes" />
+                        </Column>
+
+                    </columns>
+
+                    <items>
+
+                        <ColumnListItem id="appointmentListItem">
+
+                            <cells>
+
+                                <Text
+                                    id="txtDescription"
+                                    text="{description}" />
+
+                                <Text
+                                    id="txtDate"
+                                    text="{
+                                        path: 'date',
+                                        type: 'sap.ui.model.type.Date',
+                                        formatOptions: {
+                                            style: 'medium'
+                                        }
+                                    }" />
+
+                                <Text
+                                    id="txtNotes"
+                                    text="{notes}" />
+
+                            </cells>
+
+                        </ColumnListItem>
+
+                    </items>
+
+                </Table>
+
+            </VBox>
+
+        </content>
+
+    </Page>
+
+</mvc:View>

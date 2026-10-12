@@ -1,0 +1,11 @@
+{
+  "description": "Security profile of called application",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Admin"
+    }
+  ],
+  "attributes": [],
+  "role-templates": []
+}

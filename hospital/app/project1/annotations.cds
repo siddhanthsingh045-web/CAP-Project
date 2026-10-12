@@ -1,0 +1,1 @@
+using hospitalserv as service from '../../srv/service';
